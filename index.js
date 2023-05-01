@@ -218,7 +218,13 @@ function realKeyPress(event){
 
 
 
+const buttons = document.querySelectorAll('.key');
 
+buttons.forEach(button => {
+    button.addEventListener('click', virtualKeyPress);
+});
+
+document.addEventListener('keydown', realKeyPress);
 
 
 
